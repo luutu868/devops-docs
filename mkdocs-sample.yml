@@ -1,16 +1,16 @@
 # Project information
-site_name: "MkDocs Material Boilerplate"
-site_description: "MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions."
-site_author: "peaceiris"
-site_url: "https://mkdocs.peaceiris.com/"
+site_name: "Tài Liệu DevOps - VNPT VCI"
+site_description: "Tài liệu DevOps toàn diện từ cơ bản đến nâng cao - Linux, Docker, Kubernetes, CI/CD, Monitoring, Security và nhiều hơn nữa."
+site_author: "VNPT VCI DevOps Team"
+site_url: "https://devops.vnpt.vn/"
 
 # Copyright
-copyright: "&copy; 2021 peaceiris"
+copyright: "&copy; 2026 VNPT VCI - DevOps Team"
 
 # Repository
-repo_name: "GitHub"
-repo_url: "https://github.com/peaceiris/mkdocs-material-boilerplate"
-edit_uri: "https://github.com/peaceiris/mkdocs-material-boilerplate/edit/main/docs_sample"
+repo_name: "VNPT VCI DevOps Docs"
+repo_url: "https://github.com/luutu868/devops-docs"
+edit_uri: "https://github.com/luutu868/devops-docs/edit/main/docs_sample"
 
 # Configuration
 docs_dir: "docs_sample"
@@ -44,6 +44,8 @@ markdown_extensions:
   - toc:
       permalink: true
       separator: "_"
+  - pymdownx.highlight
+  - pymdownx.superfences
 
 plugins:
   - search:
@@ -60,28 +62,116 @@ extra:
   manifest: "manifest.json"
   social:
     - icon: "fontawesome/brands/github-alt"
-      link: "https://github.com/peaceiris"
-    - icon: "fontawesome/brands/twitter"
-      link: "https://twitter.com/piris314en"
+      link: "https://github.com/luutu868"
+    - icon: "fontawesome/solid/globe"
+      link: "https://sec.vnpt.vn/"
 
 # Page tree
 nav:
-  - "Home": "index.md"
-  - "Material for MkDocs": "material-for-mkdocs.md"
-  - "Getting started":
-      - "Download boilerplate": "getting-started/download-boilerplate.md"
-      - "pipenv": "getting-started/pipenv.md"
-      - "invoke": "getting-started/invoke.md"
-      - "Docker": "getting-started/docker.md"
-      - "pip": "getting-started/pip.md"
-  - "Hosting and Deployment":
-      - "Combinations": "hosting-and-deployment/combinations.md"
-      - "Netlify": "hosting-and-deployment/netlify.md"
-      - "GitHub Pages": "hosting-and-deployment/github-pages.md"
-      - "GitLab Pages": "hosting-and-deployment/gitlab-pages.md"
-      - "AWS Amplify Console": "hosting-and-deployment/aws-amplify-console.md"
-  - "Extensions":
-      - "MathJax": "extensions/mathjax.md"
-      - "Code Hilite": "extensions/code-hilite.md"
-      - "Footnote": "extensions/footnote.md"
+  - "Trang Chủ": "devops-index.md"
+  
+  - "1. Giới Thiệu DevOps":
+      - "DevOps là gì?": "devops-introduction/what-is-devops.md"
+      - "Văn hóa DevOps": "devops-introduction/devops-culture.md"
+      - "DevOps Lifecycle": "devops-lifecycle/lifecycle-overview.md"
+      - "DevOps Tools Ecosystem": "devops-tools/tools-overview.md"
+  
+  - "2. Linux Cơ Bản":
+      - "Giới thiệu Linux": "linux/linux-intro/linux-basics.md"
+      - "Linux Commands": "linux/commands/essential-commands.md"
+      - "Shell Scripting": "linux/shell-scripting/bash-basics.md"
+      - "Process Management": "linux/process-management/processes.md"
+      - "Performance Tuning": "linux/performance/performance-tuning.md"
+  
+  - "3. Networking":
+      - "Network Fundamentals": "networking/fundamentals/networking-basics.md"
+      - "Network Commands": "networking/commands/network-commands.md"
+      - "Network Security": "networking/security/firewall-ssh.md"
+      - "Load Balancing": "networking/load-balancing/nginx-haproxy.md"
+  
+  - "4. Version Control - Git":
+      - "Git Basics": "git/fundamentals/git-basics.md"
+      - "Git Commands": "git/commands/git-commands.md"
+      - "Git Best Practices": "git/best-practices/git-workflow.md"
+      - "GitHub & GitLab": "git/platforms/github-gitlab.md"
+  
+  - "5. Docker":
+      - "Docker Fundamentals": "docker/fundamentals/docker-basics.md"
+      - "Docker Images": "docker/images/dockerfile-best-practices.md"
+      - "Docker Containers": "docker/containers/container-management.md"
+      - "Docker Compose": "docker/compose/docker-compose.md"
+      - "Docker Security": "docker/security/docker-security.md"
+  
+  - "6. Kubernetes":
+      - "K8s Fundamentals": "kubernetes/fundamentals/k8s-basics.md"
+      - "K8s Objects": "kubernetes/objects/pods-deployments.md"
+      - "K8s Networking": "kubernetes/networking/services-ingress.md"
+      - "K8s Storage": "kubernetes/storage/volumes-pv-pvc.md"
+      - "K8s Advanced": "kubernetes/advanced/helm-operators.md"
+      - "Managed Kubernetes": "kubernetes/managed/eks-gke-aks.md"
+  
+  - "7. CI/CD":
+      - "CI/CD Fundamentals": "cicd/fundamentals/cicd-basics.md"
+      - "Jenkins": "cicd/jenkins/jenkins-pipeline.md"
+      - "GitLab CI/CD": "cicd/gitlab/gitlab-ci.md"
+      - "GitHub Actions": "cicd/github-actions/github-actions.md"
+      - "ArgoCD": "cicd/argocd/argocd-gitops.md"
+      - "CI/CD Best Practices": "cicd/best-practices/cicd-best-practices.md"
+  
+  - "8. Infrastructure as Code":
+      - "Terraform": "iac/terraform/terraform-basics.md"
+      - "Ansible": "iac/ansible/ansible-playbooks.md"
+      - "CloudFormation": "iac/cloudformation/aws-cloudformation.md"
+      - "IaC Best Practices": "iac/best-practices/iac-patterns.md"
+  
+  - "9. Monitoring & Logging":
+      - "Monitoring Basics": "monitoring/fundamentals/monitoring-basics.md"
+      - "Prometheus & Grafana": "monitoring/prometheus-grafana/setup.md"
+      - "ELK Stack": "logging/elk_stack.md"
+      - "Logging Best Practices": "monitoring/logging/log-management.md"
+      - "APM": "monitoring/apm/application-monitoring.md"
+      - "Uptime Monitoring": "monitoring/uptime/uptime-checks.md"
+  
+  - "10. Cloud Platforms":
+      - "AWS": "cloud/aws/aws-basics.md"
+      - "Google Cloud": "cloud/gcp/gcp-basics.md"
+      - "Azure": "cloud/azure/azure-basics.md"
+      - "Multi-Cloud": "cloud/multi-cloud/strategies.md"
+  
+  - "11. Security & DevSecOps":
+      - "Security Fundamentals": "security/fundamentals/security-basics.md"
+      - "Container Security": "security/container/image-scanning.md"
+      - "Kubernetes Security": "security/kubernetes/k8s-security.md"
+      - "Secrets Management": "security/secrets/vault-secrets.md"
+      - "Compliance & Audit": "security/compliance/compliance.md"
+      - "Vulnerability Management": "security/vulnerability/scanning.md"
+  
+  - "12. Databases":
+      - "Relational DBs": "databases/relational/mysql-postgres.md"
+      - "NoSQL Databases": "databases/nosql/mongodb-redis.md"
+      - "Database DevOps": "databases/devops/db-migrations.md"
+  
+  - "13. Automation & Scripting":
+      - "Python for DevOps": "automation/python/python-devops.md"
+      - "PowerShell": "automation/powershell/powershell-basics.md"
+      - "Go for DevOps": "automation/go/go-tools.md"
+  
+  - "14. Collaboration":
+      - "Documentation": "collaboration/documentation/docs-as-code.md"
+      - "Incident Management": "collaboration/incident-management/on-call.md"
+      - "Communication Tools": "collaboration/tools/slack-teams.md"
+  
+  - "15. Best Practices":
+      - "DevOps Best Practices": "best-practices/practices/devops-best-practices.md"
+      - "Case Studies": "best-practices/case-studies/success-stories.md"
+      - "Common Pitfalls": "best-practices/pitfalls/anti-patterns.md"
+  
+  - "16. Career & Resources":
+      - "DevOps Roadmap": "career/path/devops-roadmap.md"
+      - "Learning Resources": "career/resources/books-courses.md"
+  
+  - "Appendix":
+      - "Glossary": "appendix/glossary.md"
+      - "Commands Cheatsheet": "appendix/cheatsheet.md"
+  
   - "License": "license.md"

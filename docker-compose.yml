@@ -2,10 +2,11 @@ version: '3'
 
 services:
   mkdocs:
-    image: ghcr.io/peaceiris/mkdocs-material:v3.5.3
-    container_name: mkdocs_material_boilerplate
-    ports:
-      - 8000:8000
+    image: ghcr.io/peaceiris/mkdocs-material:latest
+    container_name: mkdocs_devops_docs
+    restart: unless-stopped
+    # ports:
+    #   - "8000:8000"
     volumes:
       - ${PWD}:/root
     stdin_open: true
@@ -16,3 +17,9 @@ services:
       - "--dev-addr=0.0.0.0:8000"
       - "--config-file"
       - "./mkdocs-sample.yml"
+    networks:
+      - my_app_network
+networks:
+  my_app_network:
+    external: true
+    name: cloudflare_redisinsight_app-network
