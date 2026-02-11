@@ -1,22 +1,22 @@
 # CI/CD Fundamentals
 
-## 🔄 CI/CD Là Gì?
+## CI/CD Là Gì?
 
 ### **Continuous Integration (CI)**
 
 **CI** là practice tự động integrate code changes từ nhiều developers vào shared repository **thường xuyên** (multiple times per day).
 
 **Vấn đề trước khi có CI:**
-- ❌ Integration hell: Merge conflicts khi integrate cuối project
-- ❌ Bug phát hiện muộn
-- ❌ Manual testing tốn thời gian
-- ❌ Deployment khó khăn
+- Integration hell: Merge conflicts khi integrate cuối project
+- Bug phát hiện muộn
+- Manual testing tốn thời gian
+- Deployment khó khăn
 
 **CI giải quyết:**
-- ✅ Automated builds on every commit
-- ✅ Automated testing
-- ✅ Early bug detection
-- ✅ Faster feedback loop
+- Automated builds on every commit
+- Automated testing
+- Early bug detection
+- Faster feedback loop
 
 ```
 Developer → Commit → CI Server → Build → Test → Report
@@ -51,7 +51,7 @@ CI → Artifact → Staging Deploy → Automated Tests → Production Deploy
 | **Frequency** | Every commit | Ready anytime | Every successful build |
 | **Risk** | Low | Medium | Requires mature testing |
 
-## 🏗️ CI/CD Pipeline Architecture
+## CI/CD Pipeline Architecture
 
 ### **Basic Pipeline**
 
@@ -239,7 +239,7 @@ Final:      [v2] [v2] [v2] [v2]
 | **Docker Swarm** | Simple Docker clustering |
 | **Nomad** | Multi-workload orchestration |
 
-## 📊 DORA Metrics
+## DORA Metrics
 
 **DevOps Research and Assessment (DORA)** key metrics:
 
@@ -279,7 +279,7 @@ Percentage of deployments causing failures.
 **Medium**: 31-45%
 **Low**: 46-60%
 
-## 🎯 CI/CD Best Practices
+## CI/CD Best Practices
 
 ### **1. Commit Often**
 
@@ -371,7 +371,7 @@ stages:
   - dast               # Dynamic testing (OWASP ZAP)
 ```
 
-## 🚀 Example Pipelines
+##  Example Pipelines
 
 ### **Simple Node.js Pipeline**
 
@@ -523,7 +523,7 @@ deploy:k8s:
     - main
 ```
 
-## 🔍 Debugging Pipelines
+## Debugging Pipelines
 
 ### **Common Issues**
 
@@ -598,7 +598,7 @@ deploy:k8s:
 - Canary/Blue-green deployments
 - Advanced monitoring
 
-## ✅ Quick Reference
+## Quick Reference
 
 ### **Pipeline Stages**
 ```yaml

@@ -1,6 +1,6 @@
 # CI/CD Best Practices
 
-## 🎯 Pipeline Design Principles
+## Pipeline Design Principles
 
 ### **1. Pipeline Design Best Practices**
 
@@ -134,11 +134,11 @@ git tag -a v1.2.3 -m "Release v1.2.3"
 
 ---
 
-## 🔒 Security Best Practices
+## Security Best Practices
 
 ### **1. Secret Management**
 
-**❌ NEVER Do This:**
+**NEVER Do This:**
 ```yaml
 # DON'T hardcode secrets!
 env:
@@ -146,7 +146,7 @@ env:
   API_KEY: "abc123xyz"
 ```
 
-**✅ Do This Instead:**
+**Do This Instead:**
 ```yaml
 # GitHub Actions
 jobs:
@@ -392,7 +392,7 @@ jobs:
 
 ---
 
-## 📦 Artifact Management
+## Artifact Management
 
 ### **Build Artifacts Best Practices**
 
@@ -466,16 +466,16 @@ build:
 
 ---
 
-## 🚀 Deployment Strategies
+##  Deployment Strategies
 
 ### **Strategy Comparison**
 
 | Strategy | Downtime | Rollback Speed | Cost | Complexity |
 |----------|----------|----------------|------|------------|
-| **Recreate** | ❌ Yes | Fast | Low | Low |
-| **Rolling** | ✅ No | Medium | Low | Medium |
-| **Blue-Green** | ✅ No | Instant | High (2x) | Medium |
-| **Canary** | ✅ No | Fast | Medium | High |
+| **Recreate** | Yes | Fast | Low | Low |
+| **Rolling** | No | Medium | Low | Medium |
+| **Blue-Green** | No | Instant | High (2x) | Medium |
+| **Canary** | No | Fast | Medium | High |
 
 ### **1. Blue-Green Deployment**
 
@@ -664,7 +664,7 @@ spec:
 
 ---
 
-## 📊 Monitoring & Observability
+## Monitoring & Observability
 
 ### **Key Metrics to Track**
 
@@ -787,14 +787,14 @@ def run_pipeline(name):
 
 **Docker Multi-stage Build:**
 ```dockerfile
-# ❌ Bad: Rebuilds everything on code change
+# Bad: Rebuilds everything on code change
 FROM node:18
 WORKDIR /app
 COPY . .
 RUN npm install
 RUN npm run build
 
-# ✅ Good: Cached layers
+# Good: Cached layers
 FROM node:18 AS deps
 WORKDIR /app
 COPY package*.json ./
@@ -1003,7 +1003,7 @@ README.md @tech-writers
 
 ## 🎓 Summary
 
-**✅ Key Takeaways:**
+**Key Takeaways:**
 
 1. **Fast Feedback**: Keep pipelines < 10 minutes
 2. **Security First**: Scan dependencies, secrets, containers

@@ -6,13 +6,13 @@
 
 ### **Tại Sao DevOps Cần Linux?**
 
-- 🌐 **96% servers** chạy Linux
-- 🚀 **100% top 500** supercomputers dùng Linux  
+- **96% servers** chạy Linux
+-  **100% top 500** supercomputers dùng Linux  
 - ☁️ **AWS, GCP, Azure** chủ yếu là Linux
-- 🐳 **Docker & Kubernetes** native trên Linux
+- **Docker & Kubernetes** native trên Linux
 - 💰 **Free & Open Source**
 
-## 📊 Linux vs Windows vs MacOS
+## Linux vs Windows vs MacOS
 
 | Feature | Linux | Windows | MacOS |
 |---------|-------|---------|-------|
@@ -76,7 +76,7 @@
 
 **Khuyến nghị cho DevOps**: Ubuntu 22.04 LTS hoặc Rocky Linux 9
 
-## 🏗️ Linux Architecture
+## Linux Architecture
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -228,7 +228,7 @@ sudo groupadd developers
 sudo usermod -aG developers vnpt
 ```
 
-## 🔒 File Permissions
+## File Permissions
 
 ### **Permission Structure**
 
@@ -295,7 +295,7 @@ sudo chmod -R 755 /var/www/html
 sudo chown -R www-data:www-data /var/www
 ```
 
-## 📦 Package Management
+## Package Management
 
 ### **APT (Debian/Ubuntu)**
 
@@ -386,7 +386,7 @@ lsusb  # USB devices
 lsblk  # Block devices
 ```
 
-## 🚀 Essential Commands
+##  Essential Commands
 
 ### **Navigation**
 
@@ -420,7 +420,7 @@ mkdir -p path/to/new_dir    # Create parent dirs
 rmdir empty_dir             # Remove empty directory
 ```
 
-## 🎯 DevOps Use Cases
+## DevOps Use Cases
 
 ### **1. Setting Up Web Server**
 
@@ -483,7 +483,7 @@ sudo journalctl --since "1 hour ago"
 sudo journalctl -u docker.service
 ```
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 ```bash
 # View environment variables
@@ -544,7 +544,7 @@ chmod +x hello.sh
 ls -l hello.sh
 ```
 
-## ✅ Checklist
+## Checklist
 
 - [ ] Cài đặt Ubuntu/Linux VM hoặc WSL2
 - [ ] Hiểu cấu trúc thư mục Linux

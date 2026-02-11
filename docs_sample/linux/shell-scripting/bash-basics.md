@@ -1,10 +1,10 @@
 # Bash Scripting Basics
 
-## 🚀 Introduction
+##  Introduction
 
 Shell scripting là kỹ năng quan trọng nhất cho DevOps Engineers. Nó giúp tự động hóa các tác vụ lặp đi lặp lại.
 
-## 📝 First Script
+## First Script
 
 ```bash
 #!/bin/bash
@@ -206,7 +206,7 @@ until [ $COUNT -eq 5 ]; do
 done
 ```
 
-## ⚙️ Functions
+## Functions
 
 ```bash
 #!/bin/bash
@@ -271,7 +271,7 @@ command &> all.log                   # Both (shorthand)
 command > /dev/null 2>&1
 ```
 
-## 🎯 Practical Examples
+## Practical Examples
 
 ### **1. System Backup Script**
 
@@ -313,18 +313,18 @@ echo "Old backups cleaned up"
 SERVICE="nginx"
 
 if systemctl is-active --quiet $SERVICE; then
-    echo "✅ $SERVICE is running"
+    echo "$SERVICE is running"
 else
-    echo "❌ $SERVICE is down"
+    echo "$SERVICE is down"
     echo "Attempting to restart..."
     systemctl restart $SERVICE
     
     sleep 5
     
     if systemctl is-active --quiet $SERVICE; then
-        echo "✅ $SERVICE restarted successfully"
+        echo "$SERVICE restarted successfully"
     else
-        echo "❌ Failed to restart $SERVICE"
+        echo "Failed to restart $SERVICE"
         # Send alert
         echo "Service $SERVICE is down!" | mail -s "ALERT" admin@example.com
         exit 1
@@ -411,7 +411,7 @@ echo "Total Errors (4xx/5xx): $ERRORS" >> $REPORT_FILE
 cat $REPORT_FILE
 ```
 
-## ✅ Best Practices
+## Best Practices
 
 1. **Always use shebang**
    ```bash

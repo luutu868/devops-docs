@@ -1,18 +1,18 @@
 # Kubernetes Storage: Volumes, PV & PVC
 
-## 💾 Kubernetes Storage Overview
+## Kubernetes Storage Overview
 
 Container filesystems là **ephemeral** (tạm thời). Khi container restart → **data bị mất**.
 
 **Problems:**
-- ❌ Data loss khi container restart
-- ❌ Không share data giữa containers trong Pod
-- ❌ Persistent storage cho databases
+- Data loss khi container restart
+- Không share data giữa containers trong Pod
+- Persistent storage cho databases
 
 **Solutions:**
-- ✅ **Volumes**: Share data trong Pod
-- ✅ **PersistentVolumes (PV)**: Cluster storage
-- ✅ **PersistentVolumeClaims (PVC)**: Request storage
+- **Volumes**: Share data trong Pod
+- **PersistentVolumes (PV)**: Cluster storage
+- **PersistentVolumeClaims (PVC)**: Request storage
 
 ```
 ┌────────────────────────────────────┐
@@ -328,11 +328,11 @@ spec:
 
 | Storage Type | RWO | ROX | RWX |
 |--------------|-----|-----|-----|
-| AWS EBS | ✅ | ❌ | ❌ |
-| GCP PD | ✅ | ✅ | ❌ |
-| Azure Disk | ✅ | ❌ | ❌ |
-| NFS | ✅ | ✅ | ✅ |
-| CephFS | ✅ | ✅ | ✅ |
+| AWS EBS | | | |
+| GCP PD | | | |
+| Azure Disk | | | |
+| NFS | | | |
+| CephFS | | | |
 
 ### **Reclaim Policies**
 
@@ -450,7 +450,7 @@ spec:
     path: /exports/data
 ```
 
-## 📝 PersistentVolumeClaims (PVC)
+## PersistentVolumeClaims (PVC)
 
 **PVC** là **request for storage** by user.
 
@@ -568,7 +568,7 @@ mysql-1 → data-mysql-1 (PVC) → pv-2
 mysql-2 → data-mysql-2 (PVC) → pv-3
 ```
 
-## 🎯 StorageClass
+## StorageClass
 
 **StorageClass** provides **dynamic provisioning** of PVs.
 
@@ -765,7 +765,7 @@ kubectl edit pvc my-pvc
 # PV automatically expands (for supported storage types)
 ```
 
-## 📊 Storage Comparison
+## Storage Comparison
 
 ### **Static vs Dynamic Provisioning**
 
@@ -780,17 +780,17 @@ kubectl edit pvc my-pvc
 
 | Type | Persistent | Shared | Use Case |
 |------|-----------|--------|----------|
-| **emptyDir** | ❌ | Within Pod | Cache, scratch |
+| **emptyDir** | | Within Pod | Cache, scratch |
 | **hostPath** | ⚠️ | No | Development only |
-| **ConfigMap/Secret** | ✅ | Read-only | Configuration |
-| **PVC** | ✅ | Depends on accessMode | Production data |
-| **NFS** | ✅ | Yes (RWX) | Shared files |
+| **ConfigMap/Secret** | | Read-only | Configuration |
+| **PVC** | | Depends on accessMode | Production data |
+| **NFS** | | Yes (RWX) | Shared files |
 
 ## 🎓 Best Practices
 
 ### **1. Always Use PVC in Production**
 
-❌ **Bad**: hostPath, emptyDir for important data
+**Bad**: hostPath, emptyDir for important data
 ```yaml
 volumes:
 - name: data
@@ -798,7 +798,7 @@ volumes:
     path: /data  # Lost if Pod moves to different Node
 ```
 
-✅ **Good**: PVC with reliable storage
+**Good**: PVC with reliable storage
 ```yaml
 volumes:
 - name: data
@@ -808,7 +808,7 @@ volumes:
 
 ### **2. Use Dynamic Provisioning**
 
-✅ **Create StorageClasses for different tiers:**
+**Create StorageClasses for different tiers:**
 ```yaml
 # Fast for databases
 fast-ssd: 3000 IOPS, gp3
@@ -935,7 +935,7 @@ kubectl get pod <name> -o yaml | grep -A 10 volumes:
 # Use PVC for persistent storage
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```bash
 # PV

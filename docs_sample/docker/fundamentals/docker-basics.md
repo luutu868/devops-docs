@@ -1,6 +1,6 @@
 # Docker Fundamentals
 
-## 🐳 Docker Là Gì?
+## Docker Là Gì?
 
 **Docker** là một platform để develop, ship và run applications trong containers. Container cho phép pack ứng dụng với tất cả dependencies vào một unit chuẩn hóa.
 
@@ -28,15 +28,15 @@ VM: GBs, Minutes to start    Container: MBs, Seconds to start
 
 ### **Lợi Ích của Docker**
 
-✅ **Lightweight**: Containers share OS kernel
-✅ **Fast**: Start trong giây
-✅ **Portable**: "Works on my machine" → Works everywhere
-✅ **Consistent**: Same environment Dev/Staging/Prod
-✅ **Efficient**: Chạy nhiều containers trên 1 host
-✅ **Scalable**: Easy to scale up/down
-✅ **Version Control**: Image versioning
+**Lightweight**: Containers share OS kernel
+**Fast**: Start trong giây
+**Portable**: "Works on my machine" → Works everywhere
+**Consistent**: Same environment Dev/Staging/Prod
+**Efficient**: Chạy nhiều containers trên 1 host
+**Scalable**: Easy to scale up/down
+**Version Control**: Image versioning
 
-## 🏗️ Docker Architecture
+## Docker Architecture
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -64,7 +64,7 @@ VM: GBs, Minutes to start    Container: MBs, Seconds to start
 └─────────────────────────────────────────────┘
 ```
 
-## 📦 Core Concepts
+## Core Concepts
 
 ### **1. Images**
 
@@ -90,7 +90,7 @@ VM: GBs, Minutes to start    Container: MBs, Seconds to start
 - Storage for Docker images
 - Docker Hub, AWS ECR, Google GCR, etc.
 
-## 🚀 Installation
+##  Installation
 
 ### **Ubuntu/Debian**
 
@@ -130,7 +130,7 @@ newgrp docker  # Or logout/login
 docker run hello-world
 ```
 
-## 🎯 Basic Commands
+## Basic Commands
 
 ### **Container Operations**
 
@@ -275,7 +275,7 @@ docker system prune -a --volumes  # Also remove unused volumes
 docker events
 ```
 
-## 📝 Dockerfile Basics
+## Dockerfile Basics
 
 ### **Simple Example**
 
@@ -454,25 +454,25 @@ docker run -d \
   npm run dev
 ```
 
-## 🔒 Best Practices
+## Best Practices
 
 ### **Security**
 
-✅ Use official images
-✅ Scan for vulnerabilities
-✅ Run as non-root user
-✅ Don't store secrets in images
-✅ Use specific image tags (not :latest)
-✅ Multi-stage builds
-✅ Minimal base images (alpine)
+Use official images
+Scan for vulnerabilities
+Run as non-root user
+Don't store secrets in images
+Use specific image tags (not :latest)
+Multi-stage builds
+Minimal base images (alpine)
 
 ### **Performance**
 
-✅ Minimize layers
-✅ Order Dockerfile instructions properly
-✅ Use .dockerignore
-✅ Leverage build cache
-✅ Multi-stage builds for smaller images
+Minimize layers
+Order Dockerfile instructions properly
+Use .dockerignore
+Leverage build cache
+Multi-stage builds for smaller images
 
 ### **.dockerignore Example**
 
@@ -514,7 +514,7 @@ docker stats container_name
 docker system prune -a --volumes
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```bash
 # Common commands

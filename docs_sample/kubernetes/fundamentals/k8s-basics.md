@@ -1,34 +1,37 @@
 # Kubernetes Fundamentals
 
-## ☸️ Kubernetes Là Gì?
+## Kubernetes Là Gì?
 
 **Kubernetes (K8s)** là một open-source container orchestration platform được phát triển bởi Google (năm 2014), hiện được maintain bởi Cloud Native Computing Foundation (CNCF).
 
-### **Tại Sao Cần Kubernetes?**
+### Tại Sao Cần Kubernetes?
 
-Khi bạn có **1 container** → Dùng Docker là đủ ✅
-Khi bạn có **100+ containers** → Cần Kubernetes! 🚀
+Khi bạn có **1 container** → Dùng Docker là đủ
+
+Khi bạn có **100+ containers** → Cần Kubernetes!
 
 **Vấn đề Docker không giải quyết được:**
-- ❌ Auto-scaling containers
-- ❌ Load balancing traffic
-- ❌ Self-healing (restart failed containers)
-- ❌ Rolling updates & rollbacks
-- ❌ Service discovery
-- ❌ Secret & config management
-- ❌ Multi-host networking
+
+- Auto-scaling containers
+- Load balancing traffic
+- Self-healing (restart failed containers)
+- Rolling updates & rollbacks
+- Service discovery
+- Secret & config management
+- Multi-host networking
 
 **Kubernetes giải quyết:**
-- ✅ Container orchestration
-- ✅ Auto-scaling (HPA, VPA, Cluster autoscaler)
-- ✅ Self-healing & health checks
-- ✅ Declarative configuration
-- ✅ Service discovery & load balancing
-- ✅ Storage orchestration
-- ✅ Automated rollouts & rollbacks
-- ✅ Secret & configuration management
 
-## 🏗️ Kubernetes Architecture
+- Container orchestration
+- Auto-scaling (HPA, VPA, Cluster autoscaler)
+- Self-healing & health checks
+- Declarative configuration
+- Service discovery & load balancing
+- Storage orchestration
+- Automated rollouts & rollbacks
+- Secret & configuration management
+
+## Kubernetes Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -117,7 +120,7 @@ Khi bạn có **100+ containers** → Cần Kubernetes! 🚀
 - Docker, containerd, CRI-O
 - Implements Kubernetes CRI (Container Runtime Interface)
 
-## 📦 Core Concepts
+## Core Concepts
 
 ### **1. Pod**
 ```yaml
@@ -158,7 +161,7 @@ Khi bạn có **100+ containers** → Cần Kubernetes! 🚀
 # Default namespaces: default, kube-system, kube-public
 ```
 
-## 🚀 Installation Options
+##  Installation Options
 
 ### **Local Development**
 
@@ -302,7 +305,7 @@ kubectl create namespace dev
 kubectl config set-context --current --namespace=dev
 ```
 
-## 📝 First Kubernetes Application
+## First Kubernetes Application
 
 ### **Step 1: Create Deployment**
 
@@ -427,7 +430,7 @@ kubectl delete deployment nginx-deployment
 kubectl delete service nginx-service
 ```
 
-## 🎯 Kubernetes Configuration Files
+## Kubernetes Configuration Files
 
 ### **YAML Structure**
 
@@ -466,7 +469,7 @@ spec:                    # Specification
 | `metadata.labels` | Key-value pairs | No |
 | `spec` | Desired state | Yes |
 
-## 🔍 Debugging & Troubleshooting
+## Debugging & Troubleshooting
 
 ### **Common Commands**
 
@@ -506,8 +509,8 @@ kubectl explain deployment.spec
 | State | Meaning | Action |
 |-------|---------|--------|
 | `Pending` | Waiting to be scheduled | Check nodes, resources |
-| `Running` | Pod is running | ✅ Good |
-| `Succeeded` | Completed successfully | ✅ Good for jobs |
+| `Running` | Pod is running | Good |
+| `Succeeded` | Completed successfully | Good for jobs |
 | `Failed` | Terminated with error | Check logs |
 | `CrashLoopBackOff` | Container keeps crashing | Check logs, fix app |
 | `ImagePullBackOff` | Can't pull image | Check image name/registry |
@@ -540,8 +543,8 @@ kubectl describe node <node-name>
 
 ### **1. Use Declarative Configuration**
 
-✅ **Good**: `kubectl apply -f deployment.yaml`
-❌ **Bad**: `kubectl create deployment ...`
+**Good**: `kubectl apply -f deployment.yaml`
+**Bad**: `kubectl create deployment ...`
 
 ### **2. Use Namespaces**
 
@@ -599,7 +602,7 @@ Don't hardcode configs in container images!
 
 Store all YAML files in Git repository.
 
-## 📊 Kubernetes vs Docker Compose
+## Kubernetes vs Docker Compose
 
 | Feature | Docker Compose | Kubernetes |
 |---------|---------------|------------|
@@ -612,7 +615,7 @@ Store all YAML files in Git repository.
 | **Service Discovery** | Basic | Advanced |
 | **Learning Curve** | Easy | Steep |
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```bash
 # Essential Commands
@@ -638,11 +641,11 @@ kubectl config use-context <context-name>
 kubectl config set-context --current --namespace=<namespace>
 ```
 
-## 🎯 Next Steps
+## Next Steps
 
-1. ✅ Understand Kubernetes architecture
-2. ✅ Install kubectl & minikube
-3. ✅ Deploy first application
+1. Understand Kubernetes architecture
+2. Install kubectl & minikube
+3. Deploy first application
 4. ⏭️ Learn about Pods, Deployments, Services (next section)
 5. ⏭️ Master Networking & Storage
 6. ⏭️ Explore Helm & advanced topics

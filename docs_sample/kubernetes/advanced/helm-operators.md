@@ -1,23 +1,23 @@
 # Helm & Kubernetes Operators
 
-## 📦 Helm - The Kubernetes Package Manager
+## Helm - The Kubernetes Package Manager
 
 ### **Helm Là Gì?**
 
 **Helm** là package manager cho Kubernetes (giống như apt/yum cho Linux, npm cho Node.js).
 
 **Problems without Helm:**
-- ❌ Many YAML files to manage (Deployment, Service, ConfigMap, Ingress...)
-- ❌ Hard to version and track changes
-- ❌ Difficult to reuse configurations
-- ❌ No templating or parameterization
+- Many YAML files to manage (Deployment, Service, ConfigMap, Ingress...)
+- Hard to version and track changes
+- Difficult to reuse configurations
+- No templating or parameterization
 
 **Helm solves:**
-- ✅ **Charts**: Package of Kubernetes resources
-- ✅ **Templates**: Parameterize YAML files
-- ✅ **Releases**: Versioned deployments
-- ✅ **Repositories**: Share and reuse charts
-- ✅ **Rollback**: Easy version management
+- **Charts**: Package of Kubernetes resources
+- **Templates**: Parameterize YAML files
+- **Releases**: Versioned deployments
+- **Repositories**: Share and reuse charts
+- **Rollback**: Easy version management
 
 ### **Helm Architecture**
 
@@ -868,7 +868,7 @@ kubectl get events --sort-by='.lastTimestamp'
 kubectl logs -n <op-namespace> <op-pod> -f
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```bash
 # Helm

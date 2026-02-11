@@ -1,6 +1,6 @@
 # Application Performance Monitoring (APM)
 
-## 🎯 APM Overview
+## APM Overview
 
 **APM (Application Performance Monitoring)** = theo dõi hiệu suất ứng dụng từ góc độ end-user.
 
@@ -28,16 +28,16 @@
 ```
 
 **Key Capabilities:**
-- ✅ **Distributed Tracing**: Track requests across microservices
-- ✅ **Real User Monitoring (RUM)**: Actual user experience
-- ✅ **Transaction Tracing**: End-to-end request flow
-- ✅ **Error Tracking**: Exceptions and stack traces
-- ✅ **Performance Profiling**: CPU, memory, slow queries
-- ✅ **Service Maps**: Visualize service dependencies
+- **Distributed Tracing**: Track requests across microservices
+- **Real User Monitoring (RUM)**: Actual user experience
+- **Transaction Tracing**: End-to-end request flow
+- **Error Tracking**: Exceptions and stack traces
+- **Performance Profiling**: CPU, memory, slow queries
+- **Service Maps**: Visualize service dependencies
 
 ---
 
-## 📊 Popular APM Tools
+## Popular APM Tools
 
 ### **Comparison Table**
 
@@ -54,7 +54,7 @@
 
 ---
 
-## 🔍 Elastic APM Setup
+## Elastic APM Setup
 
 ### **1. Architecture**
 
@@ -213,7 +213,7 @@ Flask==3.0.0
 
 ---
 
-## 🔍 Jaeger (Distributed Tracing)
+## Jaeger (Distributed Tracing)
 
 ### **1. Quick Start**
 
@@ -441,7 +441,7 @@ Sentry.captureMessage('Something important happened', 'warning');
 
 ---
 
-## 📊 Key APM Metrics
+## Key APM Metrics
 
 ### **1. Response Time Metrics**
 
@@ -597,10 +597,10 @@ const apm = require('elastic-apm-node').start({
 apm.setTransactionName('POST /api/orders/:id/items');
 
 // Don't use dynamic values in names
-// ❌ Bad
+// Bad
 apm.setTransactionName(`GET /api/users/${userId}`);
 
-// ✅ Good
+// Good
 apm.setTransactionName('GET /api/users/:id');
 apm.setLabel('user_id', userId);
 ```
@@ -645,14 +645,14 @@ worker.process(async (job) => {
 
 ## 🎓 Summary
 
-**✅ APM Key Features:**
+**APM Key Features:**
 - **Distributed Tracing**: Track requests across microservices
 - **Real User Monitoring**: Actual user experience metrics
 - **Error Tracking**: Exceptions with stack traces
 - **Performance Profiling**: Identify bottlenecks
 - **Service Maps**: Visualize dependencies
 
-**📊 Popular Tools:**
+**Popular Tools:**
 - **Elastic APM**: Free, integrates with ELK
 - **Jaeger**: CNCF, Kubernetes-native
 - **Sentry**: Best for error tracking

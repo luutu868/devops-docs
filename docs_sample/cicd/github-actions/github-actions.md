@@ -1,16 +1,16 @@
 # GitHub Actions
 
-## 🚀 GitHub Actions Overview
+##  GitHub Actions Overview
 
 **GitHub Actions** là built-in CI/CD platform của GitHub.
 
 **Key Features:**
-- ✅ Integrated with GitHub (no setup needed)
-- ✅ YAML-based workflows
-- ✅ 20,000+ marketplace actions
-- ✅ Matrix builds
-- ✅ Self-hosted runners
-- ✅ GitHub-hosted runners (free tier)
+- Integrated with GitHub (no setup needed)
+- YAML-based workflows
+- 20,000+ marketplace actions
+- Matrix builds
+- Self-hosted runners
+- GitHub-hosted runners (free tier)
 
 **Free Tier:**
 - Public repos: Unlimited
@@ -31,7 +31,7 @@
 └──────────────────────────────────────────┘
 ```
 
-## 📝 Workflow Basics
+## Workflow Basics
 
 ### **Simple Workflow**
 

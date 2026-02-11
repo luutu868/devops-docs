@@ -1,6 +1,6 @@
 # Monitoring Basics
 
-## 🎯 Monitoring Overview
+## Monitoring Overview
 
 **Monitoring** là quá trình thu thập, phân tích và hành động dựa trên dữ liệu từ hệ thống.
 
@@ -21,15 +21,15 @@
 ```
 
 **Key Benefits:**
-- ✅ **Detect issues** before users report them
-- ✅ **Reduce downtime** with faster incident response
-- ✅ **Optimize performance** based on data
-- ✅ **Capacity planning** for scaling
-- ✅ **Compliance** and audit trails
+- **Detect issues** before users report them
+- **Reduce downtime** with faster incident response
+- **Optimize performance** based on data
+- **Capacity planning** for scaling
+- **Compliance** and audit trails
 
 ---
 
-## 📊 Monitoring Types
+## Monitoring Types
 
 ### **1. Infrastructure Monitoring**
 
@@ -475,7 +475,7 @@ groups:
 
 ---
 
-## 📊 SLI, SLO, SLA
+## SLI, SLO, SLA
 
 ### **Definitions**
 
@@ -586,7 +586,7 @@ error_budget_policy:
 
 ## 🎓 Summary
 
-**✅ Key Monitoring Concepts:**
+**Key Monitoring Concepts:**
 
 1. **Monitoring Types**: Infrastructure, Application, Logs, Traces
 2. **Golden Signals**: Latency, Traffic, Errors, Saturation
@@ -595,7 +595,7 @@ error_budget_policy:
 5. **Alerting**: Critical, Warning, Info with proper runbooks
 6. **Error Budget**: Balance innovation with reliability
 
-**📊 Monitoring Stack:**
+**Monitoring Stack:**
 - **Metrics**: Prometheus + Grafana
 - **Logs**: ELK Stack (Elasticsearch, Logstash, Kibana)
 - **Traces**: Jaeger, Zipkin, OpenTelemetry

@@ -1,6 +1,6 @@
 # ArgoCD & GitOps
 
-## 🔄 GitOps Overview
+## GitOps Overview
 
 **GitOps** là practice sử dụng **Git** làm single source of truth cho infrastructure và applications.
 
@@ -49,15 +49,15 @@
 **ArgoCD** là declarative, GitOps continuous delivery tool for Kubernetes.
 
 **Key Features:**
-- ✅ Automated deployment
-- ✅ Health status monitoring
-- ✅ Automated sync
-- ✅ Rollback capability
-- ✅ SSO integration
-- ✅ Multi-cluster support
-- ✅ Web UI + CLI
+- Automated deployment
+- Health status monitoring
+- Automated sync
+- Rollback capability
+- SSO integration
+- Multi-cluster support
+- Web UI + CLI
 
-## 📦 Installation
+## Installation
 
 ### **Method 1: kubectl**
 
@@ -383,7 +383,7 @@ spec:
     namespace: default
 ```
 
-## ⚙️ Sync Policies
+## Sync Policies
 
 ### **Automatic Sync**
 
@@ -441,7 +441,7 @@ syncPolicy:
         - production
 ```
 
-## 🎯 Projects
+## Projects
 
 **Projects** provide logical grouping of applications.
 
@@ -580,7 +580,7 @@ metadata:
     notifications.argoproj.io/subscribe.on-deployed.slack: my-channel
 ```
 
-## 📊 Monitoring & Health
+## Monitoring & Health
 
 ### **Health Checks**
 
@@ -722,7 +722,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"  # Finally Deployment
 ```
 
-## 🔄 GitOps Workflow
+## GitOps Workflow
 
 ### **Complete GitOps Pipeline**
 
@@ -774,7 +774,7 @@ argocd app get myapp --refresh
 argocd app get myapp --hard-refresh
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```bash
 # Applications

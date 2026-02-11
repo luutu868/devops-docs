@@ -183,7 +183,7 @@ vim -d file1 file2        # Diff mode
 :%s/old/new/g            # Replace all
 ```
 
-## 🔍 SEARCH & FIND
+## SEARCH & FIND
 
 ### **grep - Search in Files**
 
@@ -278,7 +278,7 @@ sudo updatedb
 locate -n 10 ".conf"            # First 10 results
 ```
 
-## 📊 FILE ANALYSIS
+## FILE ANALYSIS
 
 ### **wc - Word Count**
 
@@ -445,7 +445,7 @@ uname -a                        # All info
 uname -r                        # Kernel version
 ```
 
-## 🌐 NETWORK COMMANDS
+## NETWORK COMMANDS
 
 ```bash
 # ping - Test connectivity
@@ -477,7 +477,7 @@ ip link show                    # Network interfaces
 ip route show                   # Routing table
 ```
 
-## ✅ Cheat Sheet
+## Cheat Sheet
 
 ```bash
 # Most commonly used commands

@@ -5,11 +5,11 @@
 **Jenkins** là leading open-source automation server cho CI/CD.
 
 **Key Features:**
-- ✅ 1800+ plugins
-- ✅ Pipeline as Code (Jenkinsfile)
-- ✅ Distributed builds
-- ✅ Extensible architecture
-- ✅ Community support
+- 1800+ plugins
+- Pipeline as Code (Jenkinsfile)
+- Distributed builds
+- Extensible architecture
+- Community support
 
 **Use Cases:**
 - CI/CD pipelines
@@ -18,7 +18,7 @@
 - Scheduled jobs
 - Infrastructure automation
 
-## 📦 Installation
+## Installation
 
 ### **Method 1: Docker (Recommended for Development)**
 
@@ -111,7 +111,7 @@ sudo systemctl enable jenkins
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-## 🎨 Jenkins Configuration
+## Jenkins Configuration
 
 ### **Initial Setup**
 
@@ -188,7 +188,7 @@ Docker:
   Install automatically: Yes
 ```
 
-## 📝 Pipeline Basics
+## Pipeline Basics
 
 ### **Declarative Pipeline**
 
@@ -253,7 +253,7 @@ node {
 | **Syntax** | Structured, easier | Groovy, flexible |
 | **Learning Curve** | Lower | Higher |
 | **Use Case** | Standard pipelines | Complex logic |
-| **Recommended** | ✅ For most cases | Advanced users |
+| **Recommended** | For most cases | Advanced users |
 
 ## 🔨 Pipeline Components
 
@@ -458,7 +458,7 @@ pipeline {
 }
 ```
 
-## 🚀 Real-World Pipelines
+##  Real-World Pipelines
 
 ### **Node.js Application**
 
@@ -553,13 +553,13 @@ pipeline {
         success {
             slackSend(
                 color: 'good',
-                message: "✅ Build #${BUILD_NUMBER} succeeded: ${BUILD_URL}"
+                message: "Build #${BUILD_NUMBER} succeeded: ${BUILD_URL}"
             )
         }
         failure {
             slackSend(
                 color: 'danger',
-                message: "❌ Build #${BUILD_NUMBER} failed: ${BUILD_URL}"
+                message: "Build #${BUILD_NUMBER} failed: ${BUILD_URL}"
             )
         }
     }
@@ -907,7 +907,7 @@ pipeline {
 }
 ```
 
-## 📊 Parallel Execution
+## Parallel Execution
 
 ```groovy
 pipeline {
@@ -1059,7 +1059,7 @@ cleanWs()
 // Restart Jenkins
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```groovy
 // Basic pipeline structure

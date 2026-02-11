@@ -1,13 +1,13 @@
 # Kubernetes Objects: Pods & Deployments
 
-## 🎯 Kubernetes Objects Overview
+## Kubernetes Objects Overview
 
 Kubernetes objects là **persistent entities** trong Kubernetes system. Chúng represent state của cluster:
 - Containers nào đang chạy
 - Resources available cho applications
 - Policies cho applications (restart, upgrades, fault-tolerance)
 
-## 📦 Pods
+## Pods
 
 ### **Pod Là Gì?**
 
@@ -32,11 +32,11 @@ Kubernetes objects là **persistent entities** trong Kubernetes system. Chúng r
 
 ### **Đặc Điểm của Pod**
 
-✅ **Ephemeral**: Pods can be created/destroyed anytime
-✅ **Unique IP**: Mỗi Pod có IP address riêng
-✅ **Shared Network**: Containers trong Pod dùng chung network namespace
-✅ **Shared Storage**: Containers có thể share volumes
-✅ **Atomic Unit**: Scale bằng cách tạo nhiều Pods, không scale containers trong Pod
+**Ephemeral**: Pods can be created/destroyed anytime
+**Unique IP**: Mỗi Pod có IP address riêng
+**Shared Network**: Containers trong Pod dùng chung network namespace
+**Shared Storage**: Containers có thể share volumes
+**Atomic Unit**: Scale bằng cách tạo nhiều Pods, không scale containers trong Pod
 
 ### **Single vs Multi-Container Pods**
 
@@ -301,25 +301,25 @@ spec:
     emptyDir: {}
 ```
 
-## 🚀 Deployments
+##  Deployments
 
 ### **Deployment Là Gì?**
 
 **Deployment** provides declarative updates for Pods and ReplicaSets.
 
 **Vấn đề với bare Pods:**
-- ❌ Không tự phục hồi nếu crash
-- ❌ Không scale được
-- ❌ Không có rolling updates
-- ❌ Không có rollback
+- Không tự phục hồi nếu crash
+- Không scale được
+- Không có rolling updates
+- Không có rollback
 
 **Deployment giải quyết:**
-- ✅ Maintain desired number of replicas
-- ✅ Self-healing
-- ✅ Rolling updates
-- ✅ Rollback
-- ✅ Scaling
-- ✅ Pause/Resume
+- Maintain desired number of replicas
+- Self-healing
+- Rolling updates
+- Rollback
+- Scaling
+- Pause/Resume
 
 ### **Deployment Architecture**
 
@@ -488,13 +488,13 @@ spec:
 ```
 
 **Pros:**
-- ✅ Zero downtime
-- ✅ Gradual traffic shift
-- ✅ Easy rollback
+- Zero downtime
+- Gradual traffic shift
+- Easy rollback
 
 **Cons:**
-- ❌ Both versions running simultaneously
-- ❌ Slower deployment
+- Both versions running simultaneously
+- Slower deployment
 
 #### **2. Recreate**
 
@@ -509,12 +509,12 @@ spec:
 2. Create new Pods
 
 **Pros:**
-- ✅ Simple
-- ✅ Only one version at a time
+- Simple
+- Only one version at a time
 
 **Cons:**
-- ❌ Downtime during update
-- ❌ Not suitable for production
+- Downtime during update
+- Not suitable for production
 
 ### **Complete Deployment Example**
 
@@ -664,12 +664,12 @@ spec:
 
 ### **1. Always Use Deployments**
 
-❌ **Bad**: Create bare Pods
+**Bad**: Create bare Pods
 ```bash
 kubectl run nginx --image=nginx
 ```
 
-✅ **Good**: Create Deployments
+**Good**: Create Deployments
 ```bash
 kubectl create deployment nginx --image=nginx
 ```
@@ -763,7 +763,7 @@ kubectl get rs
 kubectl delete rs <old-rs-name>
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```bash
 # Pods

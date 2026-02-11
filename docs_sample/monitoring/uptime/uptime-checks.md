@@ -1,6 +1,6 @@
 # Uptime Monitoring
 
-## 🎯 Uptime Monitoring Overview
+## Uptime Monitoring Overview
 
 **Uptime Monitoring** = kiểm tra liên tục xem service có đang hoạt động hay không.
 
@@ -23,14 +23,14 @@
 ```
 
 **Key Metrics:**
-- ✅ **Uptime %**: 99.9% = "three nines" = 43 minutes downtime/month
-- ✅ **Response Time**: Average, P95, P99 latency
-- ✅ **Availability**: Success rate of health checks
-- ✅ **Geographic Coverage**: Multi-region monitoring
+- **Uptime %**: 99.9% = "three nines" = 43 minutes downtime/month
+- **Response Time**: Average, P95, P99 latency
+- **Availability**: Success rate of health checks
+- **Geographic Coverage**: Multi-region monitoring
 
 ---
 
-## 📊 Uptime Percentage (SLA)
+## Uptime Percentage (SLA)
 
 ### **Availability Table**
 
@@ -58,7 +58,7 @@ Total = 7 hours/year = 99.92% uptime ✅
 
 ---
 
-## 🔍 Health Check Endpoints
+## Health Check Endpoints
 
 ### **1. Basic Health Check**
 
@@ -488,7 +488,7 @@ app.listen(3000, () => {
 
 ---
 
-## 📊 Multi-Region Monitoring
+## Multi-Region Monitoring
 
 ### **Global Monitoring Setup**
 
@@ -712,7 +712,7 @@ def generate_monthly_report(service_name, checks):
     ─────────────────────────────────────────────────
     Target SLA:          99.9%
     Actual:              {uptime_stats['uptime_percentage']}%
-    Status:              {'✅ MET' if uptime_stats['uptime_percentage'] >= 99.9 else '❌ MISSED'}
+    Status:              {'MET' if uptime_stats['uptime_percentage'] >= 99.9 else 'MISSED'}
     
     ═════════════════════════════════════════════════
     """
@@ -724,7 +724,7 @@ def generate_monthly_report(service_name, checks):
 
 ## 🎓 Summary
 
-**✅ Uptime Monitoring Best Practices:**
+**Uptime Monitoring Best Practices:**
 
 1. **Multiple Check Locations**: Monitor from different geographic regions
 2. **Appropriate Intervals**: 1-5 minutes for critical services
@@ -734,7 +734,7 @@ def generate_monthly_report(service_name, checks):
 6. **SLA Tracking**: Monitor and report uptime percentage
 7. **Runbooks**: Include recovery steps in alerts
 
-**📊 Key Metrics:**
+**Key Metrics:**
 - Uptime percentage (99.9% = 43 min downtime/month)
 - Response time (avg, P95, P99)
 - Check frequency and success rate

@@ -5,13 +5,13 @@
 **GitLab CI/CD** là built-in CI/CD solution của GitLab - không cần setup server riêng.
 
 **Key Features:**
-- ✅ Built-in to GitLab (no external tool)
-- ✅ YAML-based configuration (.gitlab-ci.yml)
-- ✅ Auto DevOps
-- ✅ Container Registry
-- ✅ Security scanning
-- ✅ Environment management
-- ✅ Review Apps
+- Built-in to GitLab (no external tool)
+- YAML-based configuration (.gitlab-ci.yml)
+- Auto DevOps
+- Container Registry
+- Security scanning
+- Environment management
+- Review Apps
 
 **Architecture:**
 ```
@@ -87,7 +87,7 @@ sudo gitlab-runner register \
 | **kubernetes** | Run in K8s pods | K8s clusters |
 | **docker+machine** | Auto-scale with Docker Machine | AWS/GCP auto-scaling |
 
-## 📝 .gitlab-ci.yml Basics
+## .gitlab-ci.yml Basics
 
 ### **Simple Pipeline**
 
@@ -161,7 +161,7 @@ job-name:
     - docker
 ```
 
-## 🎯 Core Concepts
+## Core Concepts
 
 ### **1. Stages**
 
@@ -333,7 +333,7 @@ job:
     - if: '$CI_COMMIT_BRANCH'
 ```
 
-## 🚀 Real-World Pipelines
+##  Real-World Pipelines
 
 ### **Node.js Application**
 
@@ -635,7 +635,7 @@ child-job:
     - echo "Running child pipeline"
 ```
 
-## 🐳 Docker Integration
+## Docker Integration
 
 ### **Docker-in-Docker (DinD)**
 
@@ -883,7 +883,7 @@ job:
     - your commands
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```yaml
 # Minimal .gitlab-ci.yml

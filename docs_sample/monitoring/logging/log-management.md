@@ -1,6 +1,6 @@
 # Logging Best Practices
 
-## 🎯 Logging Fundamentals
+## Logging Fundamentals
 
 **Good logging** = observable, debuggable, maintainable systems
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 📝 Log Levels
+## Log Levels
 
 ### **Standard Log Levels**
 
@@ -64,9 +64,9 @@ logger.critical(f"Out of memory: {memory_used}/{memory_total}")
 
 ---
 
-## 🏗️ Structured Logging
+## Structured Logging
 
-### **❌ Bad: Unstructured Logs**
+### **Bad: Unstructured Logs**
 
 ```python
 # DON'T do this
@@ -80,7 +80,7 @@ print(f"Order #123 total: $50.99")
 # - No metadata
 ```
 
-### **✅ Good: Structured Logs (JSON)**
+### **Good: Structured Logs (JSON)**
 
 ```python
 import json
@@ -195,7 +195,7 @@ logger.error('Payment failed', {
 
 ---
 
-## 🔍 Context and Correlation
+## Context and Correlation
 
 ### **Request ID / Trace ID**
 
@@ -298,7 +298,7 @@ def get_order(order_id):
 
 ---
 
-## 🎨 Log Format Standards
+## Log Format Standards
 
 ### **Common Fields**
 
@@ -348,9 +348,9 @@ def get_order(order_id):
 
 ---
 
-## 📦 What to Log
+## What to Log
 
-### **✅ DO Log**
+### **DO Log**
 
 ```python
 # 1. Authentication events
@@ -407,28 +407,28 @@ logger.info("Configuration reloaded", extra={
 })
 ```
 
-### **❌ DON'T Log**
+### **DON'T Log**
 
 ```python
 # 1. Sensitive data
-logger.info(f"Password: {password}")  # ❌ NEVER
-logger.info(f"Credit card: {credit_card}")  # ❌ NEVER
-logger.info(f"SSN: {ssn}")  # ❌ NEVER
-logger.info(f"API key: {api_key}")  # ❌ NEVER
+logger.info(f"Password: {password}")  # NEVER
+logger.info(f"Credit card: {credit_card}")  # NEVER
+logger.info(f"SSN: {ssn}")  # NEVER
+logger.info(f"API key: {api_key}")  # NEVER
 
 # 2. Excessive debug info (in production)
-for item in items:  # ❌ Don't log in loops
+for item in items:  # Don't log in loops
     logger.debug(f"Processing item {item}")
 
 # 3. Redundant information
-logger.info("Starting function")  # ❌ Too granular
+logger.info("Starting function")  # Too granular
 do_something()
-logger.info("Function completed")  # ❌ Too granular
+logger.info("Function completed")  # Too granular
 
 # 4. Entire request/response bodies (unless necessary)
-logger.info(f"Request: {request.json}")  # ❌ Too verbose
+logger.info(f"Request: {request.json}")  # Too verbose
 
-# ✅ Better: Log summary
+# Better: Log summary
 logger.info("Request received", extra={
     'endpoint': '/api/users',
     'method': 'POST',
@@ -438,7 +438,7 @@ logger.info("Request received", extra={
 
 ---
 
-## 🔒 Security and Privacy
+## Security and Privacy
 
 ### **Data Masking**
 
@@ -489,7 +489,7 @@ logger.info("User data", extra=mask_sensitive_data(user_data))
 
 ---
 
-## 📊 Log Aggregation Patterns
+## Log Aggregation Patterns
 
 ### **Centralized Logging Architecture**
 
@@ -561,7 +561,7 @@ environments:
 
 ---
 
-## 🚀 Performance Optimization
+##  Performance Optimization
 
 ### **Async Logging**
 
@@ -633,7 +633,7 @@ def create_order():
 
 ## 🎓 Summary
 
-**✅ Logging Best Practices:**
+**Logging Best Practices:**
 
 1. **Use structured logging** (JSON Format)
 2. **Include context** (request_id, user_id, trace_id)
@@ -646,7 +646,7 @@ def create_order():
 9. **Make logs actionable** (include runbooks, error codes)
 10. **Test logging** (verify log format, test alerts)
 
-**📊 Key Metrics to Track:**
+**Key Metrics to Track:**
 - Log volume per service
 - Error rate trends
 - Performance of expensive operations

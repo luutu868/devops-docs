@@ -31,14 +31,14 @@
 | **Control Plane Cost** | $0.10/hour ($73/month) | Free | Free |
 | **Node Cost** | EC2 pricing | GCE pricing | VM pricing |
 | **Kubernetes Version** | Usually 1-2 behind | Latest + older | Latest + 2 older |
-| **Auto-scaling** | ✅ Cluster Autoscaler | ✅ Native | ✅ Cluster Autoscaler |
+| **Auto-scaling** | Cluster Autoscaler | Native | Cluster Autoscaler |
 | **Networking** | AWS VPC CNI | GCP VPC-native | Azure CNI/Kubenet |
 | **Load Balancer** | ELB/ALB/NLB | Cloud Load Balancing | Azure LB |
 | **Storage** | EBS, EFS, FSx | Persistent Disk | Azure Disk/Files |
 | **Registry** | ECR | GCR/Artifact Registry | ACR |
 | **Serverless** | Fargate | Autopilot | AKS Virtual Nodes |
 | **Service Mesh** | App Mesh | Anthos Service Mesh | Open Service Mesh |
-| **GitOps** | ✅ | ✅ Anthos Config Mgmt | ✅ GitOps with Flux |
+| **GitOps** | | Anthos Config Mgmt | GitOps with Flux |
 
 ## 🟠 AWS EKS (Elastic Kubernetes Service)
 
@@ -711,7 +711,7 @@ az aks nodepool add ...
 --attach-acr <acr-name>
 ```
 
-## 📊 Cost Optimization
+## Cost Optimization
 
 ### **General Tips**
 
@@ -752,7 +752,7 @@ resources:
 # Remove idle node pools, clusters
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ### **AWS EKS**
 
@@ -783,11 +783,11 @@ az aks delete -g <rg> -n <cluster>
 **🎉 Hoàn thành phần Kubernetes!**
 
 **Bạn đã học:**
-- ✅ Kubernetes Fundamentals
-- ✅ Pods & Deployments
-- ✅ Services & Ingress
-- ✅ Volumes & Storage
-- ✅ Helm & Operators
-- ✅ Managed Kubernetes (EKS, GKE, AKS)
+- Kubernetes Fundamentals
+- Pods & Deployments
+- Services & Ingress
+- Volumes & Storage
+- Helm & Operators
+- Managed Kubernetes (EKS, GKE, AKS)
 
 **Tiếp theo**: [CI/CD Fundamentals →](../../cicd/fundamentals/cicd-basics.md)

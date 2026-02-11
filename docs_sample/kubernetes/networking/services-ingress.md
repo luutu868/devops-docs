@@ -1,6 +1,6 @@
 # Kubernetes Networking: Services & Ingress
 
-## 🌐 Kubernetes Networking Overview
+## Kubernetes Networking Overview
 
 Kubernetes networking giải quyết 4 vấn đề chính:
 1. **Container-to-Container**: Trong Pod (localhost)
@@ -28,7 +28,7 @@ Kubernetes networking giải quyết 4 vấn đề chính:
 └─────────────────────────────────────────────────────────┘
 ```
 
-## 🎯 Services
+## Services
 
 ### **Service Là Gì?**
 
@@ -150,11 +150,11 @@ External Request
 
 **Pros & Cons:**
 
-✅ **Pros:**
+**Pros:**
 - Simple to setup
 - Good for development
 
-❌ **Cons:**
+**Cons:**
 - Need to know Node IPs
 - Port range limited (30000-32767)
 - Not suitable for production
@@ -212,12 +212,12 @@ Internet
 
 **Pros & Cons:**
 
-✅ **Pros:**
+**Pros:**
 - Full load balancing
 - Automatic DNS
 - Production-ready
 
-❌ **Cons:**
+**Cons:**
 - Costs money (cloud LB)
 - Each Service = 1 load balancer (expensive)
 - Use Ingress instead for HTTP(S)
@@ -844,7 +844,7 @@ spec:
               number: 80
 ```
 
-## 🔒 Network Policies
+## Network Policies
 
 Control traffic flow between Pods (firewall rules).
 
@@ -885,7 +885,7 @@ spec:
 
 ### **1. Use Ingress for HTTP(S)**
 
-❌ **Bad**: Multiple LoadBalancers
+**Bad**: Multiple LoadBalancers
 ```yaml
 # Expensive! Each app = 1 cloud LB
 type: LoadBalancer  # App 1
@@ -893,7 +893,7 @@ type: LoadBalancer  # App 2
 type: LoadBalancer  # App 3
 ```
 
-✅ **Good**: One Ingress for all apps
+**Good**: One Ingress for all apps
 ```yaml
 # 1 cloud LB for all apps
 kind: Ingress
@@ -978,7 +978,7 @@ nslookup myapp.example.com
 openssl s_client -connect myapp.example.com:443 -servername myapp.example.com
 ```
 
-## ✅ Quick Reference
+## Quick Reference
 
 ```bash
 # Services

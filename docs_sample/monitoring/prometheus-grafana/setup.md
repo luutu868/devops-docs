@@ -1,6 +1,6 @@
 # Prometheus & Grafana
 
-## 🎯 Overview
+## Overview
 
 **Prometheus** = Metrics collection & storage  
 **Grafana** = Visualization & dashboards
@@ -22,7 +22,7 @@
 
 ---
 
-## 🚀 Prometheus Setup
+##  Prometheus Setup
 
 ### **1. Docker Compose Installation**
 
@@ -338,7 +338,7 @@ quantile(0.95, http_request_duration_seconds)
 
 ---
 
-## 📊 Grafana Setup
+## Grafana Setup
 
 ### **1. Datasource Configuration**
 
@@ -760,7 +760,7 @@ curl http://localhost:9093/api/v1/status | jq
 
 ---
 
-## ☸️  Kubernetes Deployment
+##  Kubernetes Deployment
 
 ### **Prometheus Operator**
 
@@ -841,26 +841,26 @@ spec:
 
 ## 🎓 Summary
 
-**✅ Prometheus:**
+**Prometheus:**
 - Time-series database for metrics
 - Pull-based scraping model
 - PromQL query language
 - Built-in alerting
 
-**✅ Grafana:**
+**Grafana:**
 - Visualization and dashboards
 - Multiple datasource support
 - Alerting and notifications
 - Template variables for dynamic dashboards
 
-**✅ Complete Stack:**
+**Complete Stack:**
 - Prometheus: Metrics storage
 - Alertmanager: Alert routing
 - Node Exporter: System metrics
 - cAdvisor: Container metrics
 - Grafana: Visualization
 
-**📊 Key Commands:**
+**Key Commands:**
 ```bash
 # Prometheus
 curl http://localhost:9090/api/v1/query?query=up
