@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/luutu868/devops-docs/main/docs_sample/images/graduate-cap.png" alt="DevOps Docs icon" width="170">
+<img src="https://raw.githubusercontent.com/luutu868/devops-docs/main/docs_sample/images/career/graduate-cap.png" alt="DevOps Docs icon" width="170">
 <br>Tài Liệu DevOps - VNPT VCI<br>
 </h1>
 
