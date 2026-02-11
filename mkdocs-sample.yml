@@ -10,29 +10,28 @@ copyright: "&copy; 2026 VNPT VCI - DevOps Team"
 # Repository
 repo_name: "VNPT VCI DevOps Docs"
 repo_url: "https://github.com/luutu868/devops-docs"
-edit_uri: "https://github.com/luutu868/devops-docs/edit/main/docs_sample"
+edit_uri: ""
 
 # Configuration
 docs_dir: "docs_sample"
 theme:
-  name: "material"
-  language: "en"
-  shortcuts:
-    help: 191 # ?
-    next: 78 # n
-    previous: 80 # p
-    search: 83 # s
-  palette:
-    primary: "blue"
-    accent: "blue"
-  features:
-    - tabs
-  #font:
-  #text: 'Ubuntu'
-  #code: 'Ubuntu Mono'
-  #icon:
-  #logo: 'images/logo.svg'
-  #favicon: 'assets/images/favicon.ico'
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - bash
+    - python
+    - javascript
+    - dockerfile
+    - json
+    - xml
+  navigation_depth: 3
+  collapse_navigation: true
+  sticky_navigation: true
+  include_homepage_in_sidebar: true
+  prev_next_buttons_location: both
+  titles_only: false
+  locale: en
 
 # Extensions
 markdown_extensions:
@@ -68,41 +67,47 @@ extra:
 
 # Page tree
 nav:
-  - "Trang Chủ": "devops-index.md"
+  - "🏠 Trang Chủ": "devops-index.md"
   
-  - "1. Giới Thiệu DevOps":
+  - "🎯 Giới Thiệu":
       - "DevOps là gì?": "devops-introduction/what-is-devops.md"
       - "Văn hóa DevOps": "devops-introduction/devops-culture.md"
       - "DevOps Lifecycle": "devops-lifecycle/lifecycle-overview.md"
       - "DevOps Tools Ecosystem": "devops-tools/tools-overview.md"
   
-  - "2. Linux Cơ Bản":
+  - "🚀 Lộ Trình Học Tập":
+      - "Cách Sử Dụng Tài Liệu": "career/path/devops-roadmap.md"
+      - "Hướng Dẫn Sử Dụng Tài Liệu": "career/path/guide.md"
+      - "Roadmap Chi Tiết": "career/path/roadmap-detail.md"
+      - "Tài Nguyên DevOps": "career/path/resources.md"
+  
+  - "🔧 Yêu Cầu Hệ Thống":
       - "Giới thiệu Linux": "linux/linux-intro/linux-basics.md"
       - "Linux Commands": "linux/commands/essential-commands.md"
       - "Shell Scripting": "linux/shell-scripting/bash-basics.md"
       - "Process Management": "linux/process-management/processes.md"
       - "Performance Tuning": "linux/performance/performance-tuning.md"
   
-  - "3. Networking":
+  - "🌐 Tài Nguyên Bổ Sung":
       - "Network Fundamentals": "networking/fundamentals/networking-basics.md"
       - "Network Commands": "networking/commands/network-commands.md"
       - "Network Security": "networking/security/firewall-ssh.md"
       - "Load Balancing": "networking/load-balancing/nginx-haproxy.md"
   
-  - "4. Version Control - Git":
+  - "📦 Version Control":
       - "Git Basics": "git/fundamentals/git-basics.md"
       - "Git Commands": "git/commands/git-commands.md"
       - "Git Best Practices": "git/best-practices/git-workflow.md"
       - "GitHub & GitLab": "git/platforms/github-gitlab.md"
   
-  - "5. Docker":
+  - "🐳 Docker":
       - "Docker Fundamentals": "docker/fundamentals/docker-basics.md"
       - "Docker Images": "docker/images/dockerfile-best-practices.md"
       - "Docker Containers": "docker/containers/container-management.md"
       - "Docker Compose": "docker/compose/docker-compose.md"
       - "Docker Security": "docker/security/docker-security.md"
   
-  - "6. Kubernetes":
+  - "☸️ Kubernetes":
       - "K8s Fundamentals": "kubernetes/fundamentals/k8s-basics.md"
       - "K8s Objects": "kubernetes/objects/pods-deployments.md"
       - "K8s Networking": "kubernetes/networking/services-ingress.md"
@@ -110,7 +115,7 @@ nav:
       - "K8s Advanced": "kubernetes/advanced/helm-operators.md"
       - "Managed Kubernetes": "kubernetes/managed/eks-gke-aks.md"
   
-  - "7. CI/CD":
+  - "🔄 CI/CD":
       - "CI/CD Fundamentals": "cicd/fundamentals/cicd-basics.md"
       - "Jenkins": "cicd/jenkins/jenkins-pipeline.md"
       - "GitLab CI/CD": "cicd/gitlab/gitlab-ci.md"
@@ -118,13 +123,13 @@ nav:
       - "ArgoCD": "cicd/argocd/argocd-gitops.md"
       - "CI/CD Best Practices": "cicd/best-practices/cicd-best-practices.md"
   
-  - "8. Infrastructure as Code":
+  - "🏗️ Infrastructure as Code":
       - "Terraform": "iac/terraform/terraform-basics.md"
       - "Ansible": "iac/ansible/ansible-playbooks.md"
       - "CloudFormation": "iac/cloudformation/aws-cloudformation.md"
       - "IaC Best Practices": "iac/best-practices/iac-patterns.md"
   
-  - "9. Monitoring & Logging":
+  - "📊 Monitoring & Logging":
       - "Monitoring Basics": "monitoring/fundamentals/monitoring-basics.md"
       - "Prometheus & Grafana": "monitoring/prometheus-grafana/setup.md"
       - "ELK Stack": "logging/elk_stack.md"
@@ -132,13 +137,13 @@ nav:
       - "APM": "monitoring/apm/application-monitoring.md"
       - "Uptime Monitoring": "monitoring/uptime/uptime-checks.md"
   
-  - "10. Cloud Platforms":
+  - "☁️ Cloud Platforms":
       - "AWS": "cloud/aws/aws-basics.md"
       - "Google Cloud": "cloud/gcp/gcp-basics.md"
       - "Azure": "cloud/azure/azure-basics.md"
       - "Multi-Cloud": "cloud/multi-cloud/strategies.md"
   
-  - "11. Security & DevSecOps":
+  - "🔒 Security & DevSecOps":
       - "Security Fundamentals": "security/fundamentals/security-basics.md"
       - "Container Security": "security/container/image-scanning.md"
       - "Kubernetes Security": "security/kubernetes/k8s-security.md"
@@ -146,32 +151,25 @@ nav:
       - "Compliance & Audit": "security/compliance/compliance.md"
       - "Vulnerability Management": "security/vulnerability/scanning.md"
   
-  - "12. Databases":
+  - "💾 Databases":
       - "Relational DBs": "databases/relational/mysql-postgres.md"
       - "NoSQL Databases": "databases/nosql/mongodb-redis.md"
       - "Database DevOps": "databases/devops/db-migrations.md"
   
-  - "13. Automation & Scripting":
+  - "⚙️ Automation & Scripting":
       - "Python for DevOps": "automation/python/python-devops.md"
       - "PowerShell": "automation/powershell/powershell-basics.md"
       - "Go for DevOps": "automation/go/go-tools.md"
   
-  - "14. Collaboration":
+  - "🤝 Collaboration":
       - "Documentation": "collaboration/documentation/docs-as-code.md"
       - "Incident Management": "collaboration/incident-management/on-call.md"
       - "Communication Tools": "collaboration/tools/slack-teams.md"
   
-  - "15. Best Practices":
-      - "DevOps Best Practices": "best-practices/practices/devops-best-practices.md"
+  - "💡 Đóng Góp":
+      - "Best Practices": "best-practices/practices/devops-best-practices.md"
       - "Case Studies": "best-practices/case-studies/success-stories.md"
       - "Common Pitfalls": "best-practices/pitfalls/anti-patterns.md"
-  
-  - "16. Career & Resources":
-      - "DevOps Roadmap": "career/path/devops-roadmap.md"
       - "Learning Resources": "career/resources/books-courses.md"
   
-  - "Appendix":
-      - "Glossary": "appendix/glossary.md"
-      - "Commands Cheatsheet": "appendix/cheatsheet.md"
-  
-  - "License": "license.md"
+  - "📖 License": "license.md"

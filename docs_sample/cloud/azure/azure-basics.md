@@ -5,12 +5,14 @@
 Microsoft Azure là nền tảng điện toán đám mây của Microsoft, cung cấp 200+ services cho computing, analytics, storage và networking.
 
 **Ưu điểm Azure:**
-- **Enterprise ready**: Strong integration với Microsoft ecosystem
-- **Hybrid cloud**: Best hybrid capabilities (Azure Arc, Azure Stack)
-- **Windows workloads**: Native support for .NET, SQL Server, Active Directory
-- **Global reach**: 60+ regions (most of any cloud provider)
-- **Compliance**: 90+ compliance certifications
-- **Innovation**: Leading in enterprise AI, IoT, mixed reality
+```yaml
+- Enterprise ready: Strong integration với Microsoft ecosystem
+- Hybrid cloud: Best hybrid capabilities (Azure Arc, Azure Stack)
+- Windows workloads: Native support for .NET, SQL Server, Active Directory
+- Global reach: 60+ regions (most of any cloud provider)
+- Compliance: 90+ compliance certifications
+- Innovation: Leading in enterprise AI, IoT, mixed reality
+```
 
 ## Azure Global Infrastructure
 

@@ -5,11 +5,13 @@
 Amazon Web Services (AWS) là nền tảng điện toán đám mây toàn diện và được sử dụng rộng rãi nhất thế giới, cung cấp hơn 200 dịch vụ từ các data centers trên toàn cầu.
 
 **Ưu điểm AWS:**
-- **Phổ biến nhất**: Market leader với 32% thị phần
-- **Dịch vụ đa dạng**: 200+ dịch vụ covering mọi use case
-- **Global infrastructure**: 30+ regions, 96+ availability zones
-- **Mature ecosystem**: Tools, documentation, community lớn
-- **Enterprise ready**: Compliance, security, support tốt
+```yaml
+- Phổ biến nhất: Market leader với 32% thị phần
+- Dịch vụ đa dạng: 200+ dịch vụ covering mọi use case
+- Global infrastructure: 30+ regions, 96+ availability zones
+- Mature ecosystem: Tools, documentation, community lớn
+- Enterprise ready: Compliance, security, support tốt
+```
 
 ## AWS Global Infrastructure
 

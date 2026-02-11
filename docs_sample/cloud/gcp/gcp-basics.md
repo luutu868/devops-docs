@@ -5,12 +5,14 @@
 Google Cloud Platform (GCP) là bộ dịch vụ điện toán đám mây của Google, tận dụng cùng infrastructure mà Google sử dụng cho sản phẩm của mình như Google Search, Gmail, YouTube.
 
 **Ưu điểm GCP:**
-- **Google's infrastructure**: Same infrastructure as Google products
-- **Performance**: Global fiber network, low latency
-- **Big Data & ML**: Leading AI/ML services (TensorFlow, BigQuery)
-- **Kubernetes**: GKE - Best managed Kubernetes service
-- **Pricing**: Per-second billing, sustained use discounts
-- **Open source**: Strong commitment to open source technologies
+```yaml
+- Google's infrastructure: Same infrastructure as Google products
+- Performance: Global fiber network, low latency
+- Big Data & ML: Leading AI/ML services (TensorFlow, BigQuery)
+- Kubernetes: GKE - Best managed Kubernetes service
+- Pricing: Per-second billing, sustained use discounts
+- Open source: Strong commitment to open source technologies
+```
 
 ## GCP Global Infrastructure
 

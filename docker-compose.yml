@@ -2,7 +2,10 @@ version: '3'
 
 services:
   mkdocs:
-    image: ghcr.io/peaceiris/mkdocs-material:latest
+    image: mkdocs-material-mkdocs:latest
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     container_name: mkdocs_devops_docs
     restart: unless-stopped
     # ports:

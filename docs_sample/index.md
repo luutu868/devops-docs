@@ -1,67 +1,167 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/peaceiris/mkdocs-material-boilerplate/main/docs_sample/images/graduate-cap.png" alt="MkDocs icon" width="170">
-<br>MkDocs của TuLV<br>4ever
+<img src="../images/career/graduate-cap.png" alt="DevOps Docs icon" width="170">
+<br>Tài Liệu DevOps - VNPT VCI<br>
 </h1>
 
-![Eyecatch image of MkDocs Material Boilerplate (Starter Kit)](https://raw.githubusercontent.com/peaceiris/mkdocs-material-boilerplate/main/docs_sample/images/material.png)
+[![GitHub](https://img.shields.io/badge/GitHub-luutu868%2Fdevops--docs-blue?logo=github)](https://github.com/luutu868/devops-docs)
+[![MkDocs](https://img.shields.io/badge/MkDocs-ReadTheDocs-blue)](https://www.mkdocs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/luutu868/devops-docs/blob/main/LICENSE)
 
+---
 
+## 📚 Giới Thiệu
 
-[![license](https://img.shields.io/github/license/peaceiris/mkdocs-material-boilerplate.svg)](https://github.com/peaceiris/mkdocs-material-boilerplate/blob/main/LICENSE)
-[![release](https://img.shields.io/github/release/peaceiris/mkdocs-material-boilerplate.svg)](https://github.com/peaceiris/mkdocs-material-boilerplate/releases/latest)
-[![GitHub release date](https://img.shields.io/github/release-date/peaceiris/mkdocs-material-boilerplate.svg)](https://github.com/peaceiris/mkdocs-material-boilerplate/releases)
-[![GitHub Actions status](https://github.com/peaceiris/mkdocs-material-boilerplate/workflows/github%20pages/badge.svg)](https://github.com/peaceiris/mkdocs-material-boilerplate/actions)
+Chào mừng bạn đến với tài liệu DevOps toàn diện của VNPT VCI! Đây là nguồn tài liệu được biên soạn kỹ lưỡng để giúp bạn từ người mới bắt đầu trở thành một DevOps Engineer chuyên nghiệp.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9c95ccf4-5c1e-447b-8025-dd0b6f8764a5/deploy-status)](https://app.netlify.com/sites/mkdocs-material/deploys)
+**Repository:** [https://github.com/luutu868/devops-docs](https://github.com/luutu868/devops-docs)
 
-<!-- https://shields.io/ -->
+---
 
+## 🚀 Quick Start
 
+### Chạy với Docker Compose (Khuyến nghị)
 
-## Details
+```bash
+# Clone repository
+git clone https://github.com/luutu868/devops-docs.git
+cd devops-docs
 
-Read more 👉 [Documentation - MkDocs Material Boilerplate]
+# Tạo network (nếu chưa có)
+docker network create cloudflare_redisinsight_app-network
 
-[Documentation - MkDocs Material Boilerplate]: https://peaceiris.github.io/mkdocs-material-boilerplate/
+# Chạy MkDocs với Docker Compose
+docker compose up -d
 
+# Xem logs
+docker compose logs -f mkdocs
 
-
-## Quick start
-
-```sh
-git clone https://github.com/peaceiris/mkdocs-material-boilerplate.git
-cd mkdocs-material-boilerplate
-pipenv sync --dev
-pipenv shell
-inv serve --config-file mkdocs-sample.yml
+# Truy cập tại: http://localhost:8000
 ```
 
+### Các lệnh Docker Compose hữu ích
 
+```bash
+# Dừng service
+docker compose stop
 
-## Links
+# Khởi động lại
+docker compose restart mkdocs
 
-- [mkdocs/mkdocs: Project documentation with Markdown - GitHub]
-- [squidfunk/mkdocs-material: A Material Design theme for MkDocs]
+# Xóa container
+docker compose down
 
-[mkdocs/mkdocs: Project documentation with Markdown - GitHub]: https://github.com/mkdocs/mkdocs/
-[squidfunk/mkdocs-material: A Material Design theme for MkDocs]: https://github.com/squidfunk/mkdocs-material
+# Rebuild và chạy lại
+docker compose up -d --build
+```
 
+### Chạy với Python (Alternative)
 
+```bash
+# Cài đặt dependencies
+pip install -r requirements.txt
 
-## License
+# Chạy development server
+mkdocs serve -f mkdocs-sample.yml
 
-- [MIT License]
-- [The graduate cap icon] made by [Freepik] from [www.flaticon.com] is licensed by [CC 3.0 BY]
-- Made by 4ever
+# Build static site
+mkdocs build -f mkdocs-sample.yml
+```
 
-[MIT License]: https://github.com/peaceiris/mkdocs-material-boilerplate/blob/main/LICENSE
-[The graduate cap icon]: https://www.flaticon.com/free-icon/graduate-cap_62627
-[Freepik]: https://www.freepik.com/
-[www.flaticon.com]: https://www.flaticon.com/
-[CC 3.0 BY]: http://creativecommons.org/licenses/by/3.0/
+---
 
+## 📖 Nội Dung Tài Liệu
 
+### 🎯 **Giới Thiệu DevOps**
+- DevOps là gì?
+- Văn hóa DevOps
+- DevOps Lifecycle
+- DevOps Tools Ecosystem
 
-## About VNPT VCI
+### 🔧 **Linux & Networking**
+- Linux Basics & Commands
+- Shell Scripting & Process Management
+- Network Fundamentals & Security
+- Load Balancing (Nginx, HAProxy)
 
-- [VCIC Homepage](https://sec.vnpt.vn/)
+### 📦 **Version Control & Git**
+- Git Basics & Advanced Commands
+- Git Workflows & Best Practices
+- GitHub & GitLab
+
+### 🐳 **Docker & Kubernetes**
+- Docker Fundamentals, Images & Containers
+- Docker Compose & Security
+- Kubernetes Architecture & Objects
+- K8s Networking, Storage & Advanced Topics
+- Managed Kubernetes (EKS, GKE, AKS)
+
+### 🔄 **CI/CD**
+- CI/CD Fundamentals
+- Jenkins Pipeline
+- GitLab CI/CD & GitHub Actions
+- ArgoCD & GitOps
+- CI/CD Best Practices
+
+### 🏗️ **Infrastructure as Code**
+- Terraform
+- Ansible Playbooks
+- AWS CloudFormation
+- IaC Best Practices
+
+### 📊 **Monitoring & Logging**
+- Monitoring Basics
+- Prometheus & Grafana
+- ELK Stack
+- APM & Uptime Monitoring
+- Log Management Best Practices
+
+### ☁️ **Cloud Platforms**
+- AWS Basics
+- Google Cloud Platform
+- Microsoft Azure
+- Multi-Cloud Strategies
+
+### 🔒 **Security & DevSecOps**
+- Security Fundamentals
+- Container & Kubernetes Security
+- Secrets Management (Vault)
+- Compliance & Audit
+- Vulnerability Scanning
+
+### 💾 **Databases & Automation**
+- Relational & NoSQL Databases
+- Database DevOps & Migrations
+- Python, PowerShell & Go for DevOps
+
+### 💡 **Best Practices & Career**
+- DevOps Best Practices
+- Case Studies & Success Stories
+- Common Pitfalls & Anti-patterns
+- DevOps Roadmap
+- Learning Resources
+
+---
+
+## 🔗 Links
+
+- **GitHub Repository**: [luutu868/devops-docs](https://github.com/luutu868/devops-docs)
+- **MkDocs**: [Project documentation with Markdown](https://github.com/mkdocs/mkdocs/)
+- **ReadTheDocs Theme**: [MkDocs ReadTheDocs theme](https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs)
+
+---
+
+## 📝 License
+
+- [MIT License](https://github.com/luutu868/devops-docs/blob/main/LICENSE)
+- [The graduate cap icon](https://www.flaticon.com/free-icon/graduate-cap_62627) made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+
+---
+
+## 👨‍💻 About VNPT VCI
+
+**VNPT VCI DevOps Team**
+
+- Email: security@vnpt.vn
+- Website: [https://sec.vnpt.vn/](https://sec.vnpt.vn/)
+
+© 2026 VNPT VCI - DevOps Team

@@ -5,12 +5,14 @@
 Multi-cloud là chiến lược sử dụng nhiều cloud providers đồng thời để tối ưu hóa performance, cost, và risk management. Thay vì lock-in vào một provider, organizations có thể leverage strengths của từng cloud.
 
 **Lợi ích Multi-Cloud:**
-- **Avoid vendor lock-in**: Không phụ thuộc vào một provider
-- **Best of breed**: Chọn service tốt nhất cho từng use case
-- **Disaster recovery**: Backup across providers
-- **Cost optimization**: Leverage pricing differences
-- **Compliance**: Meet data residency requirements
-- **Geographic coverage**: Global presence
+```yaml
+- Avoid vendor lock-in: Không phụ thuộc vào một provider
+- Best of breed: Chọn service tốt nhất cho từng use case
+- Disaster recovery: Backup across providers
+- Cost optimization: Leverage pricing differences
+- Compliance: Meet data residency requirements
+- Geographic coverage: Global presence
+```
 
 ## Multi-Cloud Architecture Patterns
 

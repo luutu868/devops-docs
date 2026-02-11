@@ -1,7 +1,7 @@
-# Tài Liệu DevOps - VNPT VCI
+# 🚀 Tài Liệu DevOps - VNPT VCI
 
 <div align="center">
-  <img src="images/devops-logo.png" alt="DevOps Logo" width="400">
+  <img src="../images/logos/devops.png" alt="DevOps Logo" width="300">
 </div>
 
 ## 🎯 Giới Thiệu
