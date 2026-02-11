@@ -123,7 +123,7 @@ nav:
       - "ArgoCD": "cicd/argocd/argocd-gitops.md"
       - "CI/CD Best Practices": "cicd/best-practices/cicd-best-practices.md"
   
-  - "🏗️ Infrastructure as Code":
+  - "⩜⃝ Infrastructure as Code":
       - "Terraform": "iac/terraform/terraform-basics.md"
       - "Ansible": "iac/ansible/ansible-playbooks.md"
       - "CloudFormation": "iac/cloudformation/aws-cloudformation.md"
